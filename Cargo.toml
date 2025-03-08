@@ -1,0 +1,23 @@
+[package]
+name = "bgv"
+description = "An efficient FHE library"
+repository = "https://github.com/azzaouit/bgv-rs"
+version = "0.6.0"
+edition = "2021"
+license = "MIT"
+keywords = ["cryptography", "fhe"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "0.9.0"
+rand_distr = "0.5.1"
+rug = "1.24.0"
+serde = { version = "1.0", features = ["derive"] }
+
+[dev-dependencies]
+criterion = "0.5.1"
+
+[[bench]]
+name = "bgv_benchmark"
+harness = false
